@@ -7,6 +7,16 @@ def isNumOrDot(string: str):
     return bool(NUM_OR_DOT_REGEX.search(string))
 
 
+def convertToNumber(string: str):
+
+    number = (float(string) * -1)
+
+    if number.is_integer():
+        number = int(number)
+
+    return number
+
+
 def isEmpty(string: str):
     return len(string) == 0
 
