@@ -8,6 +8,7 @@ from variables import WINDOW_ICON_PATH
 from buttons import ButtonsGrid
 
 if __name__ == '__main__':
+
     # Cria a aplicação
     app = QApplication(sys.argv)
     window = MainWindow()
@@ -25,9 +26,8 @@ if __name__ == '__main__':
     # Display
     display = Display()
     window.addWidgetToVLayout(display)
-
     # Grid
-    buttonsGrid = ButtonsGrid(display, info)
+    buttonsGrid = ButtonsGrid(display, info, window)
     window.vLayout.addLayout(buttonsGrid)
 
     # Button
